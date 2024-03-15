@@ -46,10 +46,8 @@ checkFileExist "local.env" "请参考 local.env.sh"
 source "local.env"
 # shellcheck disable=SC2154
 confirm "docker_registry_host" "$docker_registry_host"
+confirm "docker_registry_port" "$docker_registry_port"
 
+mkdir -p ~/.docker/certs.d/"$docker_registry_host:$docker_registry_port"
 
-mkdir certs && openssl req -newkey rsa:4096 -nodes -sha256 \
-  -keyout certs/"$docker_registry_host".key \
-  -x509 \
-  -days 365 \
-  -out certs/"$docker_registry_host".crt
+cp local_certs/"$docker_registry_host.key" ~/.docker/certs.d/"$docker_registry_host:$docker_registry_port/client.key"

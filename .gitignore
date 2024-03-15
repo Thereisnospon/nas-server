@@ -1,3 +1,4 @@
 local.env
 certs/
 .idea/
+local_*/

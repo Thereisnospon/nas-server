@@ -42,12 +42,8 @@ function checkFileExist() {
     fi
 }
 
-checkFileExist "local.env" "请参考 local.env.sh"
-source "local.env"
-# shellcheck disable=SC2154
-confirm "docker_registry_host" "$docker_registry_host"
-confirm "docker_registry_port" "$docker_registry_port"
+cur_dir="$(pwd)"
+local_env="$cur_dir/local.env"
 
-mkdir -p ~/.docker/certs.d/"$docker_registry_host:$docker_registry_port"
-
-cp local_certs/"$docker_registry_host.key" ~/.docker/certs.d/"$docker_registry_host:$docker_registry_port/client.key"
+checkFileExist "$local_env" "请参考 $local_env"
+source "$local_env"

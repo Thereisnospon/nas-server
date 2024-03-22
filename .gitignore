@@ -2,3 +2,7 @@ local.env
 certs/
 .idea/
 local_*/
+node_modules
+dist/
+dist_ts/
+dist_webpack/

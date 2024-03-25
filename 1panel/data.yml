@@ -1,0 +1,20 @@
+name: ss
+tags:
+  - 工具
+title: ss
+type: 工具
+description: ss
+additionalProperties:
+  key: ss
+  name: ss
+  tags:
+    - Tool
+  shortDescZh: ss
+  shortDescEn: ss
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://hub.docker.com/r/shadowsocks/shadowsocks-libev
+  github: https://hub.docker.com/r/shadowsocks/shadowsocks-libev
+  document: https://hub.docker.com/r/shadowsocks/shadowsocks-libev

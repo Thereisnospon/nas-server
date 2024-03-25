@@ -1,0 +1,26 @@
+version: "1"
+services:
+  qbittorrent:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+#      - UID=1000
+#      - GID=1000
+      - SERVER_PORT=${PORT_VALUE}
+      - PASSWORD=${PASSWORD_VALUE}
+      - METHOD=${METHOD_VALUE}
+      - TIMEOUT=${TIMEOUT_VALUE}
+    ports:
+      - "${PORT_VALUE}:${PORT_VALUE}"
+      - "${PORT_VALUE}:${PORT_VALUE}/udp"
+    volumes:
+      - "./data:/data"
+    image: "shadowsocks/shadowsocks-libev:v3.3.5"
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

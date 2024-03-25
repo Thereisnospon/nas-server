@@ -1,0 +1,33 @@
+additionalProperties:
+  formFields:
+    - default: 8006
+      edit: true
+      envKey: PORT_VALUE
+      labelEn: Peer Port
+      labelZh: 服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default:
+      edit: true
+      envKey: PORT_VALUE
+      labelEn: Peer Port
+      labelZh: 服务端口
+      required: true
+      type: string
+    - default: PORT
+      edit: true
+      envKey: PORT_VALUE
+      labelEn: Peer Port
+      labelZh: 服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: PORT
+      edit: true
+      envKey: PORT_VALUE
+      labelEn: Peer Port
+      labelZh: 服务端口
+      required: true
+      rule: paramPort
+      type: number
